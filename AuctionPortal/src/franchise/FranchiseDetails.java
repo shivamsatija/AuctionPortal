@@ -15,6 +15,8 @@ public class FranchiseDetails {
 	private String franchiseCoach;
 	private double amountLeft;
 	private double amountSpent;
+	private boolean valid;
+	
 	public String getFranchiseId() {
 		return franchiseId;
 	}
@@ -57,7 +59,12 @@ public class FranchiseDetails {
 	public void setAmountSpent(double amountSpent) {
 		this.amountSpent = amountSpent;
 	}
-	
+	public boolean isValid() {
+		return valid;
+	}
+	public void setValid(boolean valid) {
+		this.valid = valid;
+	}
 	
 
 }

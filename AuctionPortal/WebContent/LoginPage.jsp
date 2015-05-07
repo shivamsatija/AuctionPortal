@@ -23,7 +23,7 @@
 			Please enter your password
 			<input type="password" name="password"/>
 			
-			<input type="submit" value="submit">			
+			<input type="submit" name="AdminLogin" value="submit">			
 		
 		</form>
 		<br>
@@ -39,12 +39,12 @@
 		<form action='<%=request.getContextPath()%>/FranchiseLoginServlet' method="POST">
 
 			Please enter your Franchise Id (emailId)		
-			<input type="text" name="username"/><br>		
+			<input type="text" name="franchiseId"/><br>		
 		
 			Please enter your password
-			<input type="password" name="password"/>
+			<input type="password" name="franchisePassword"/>
 			
-			<input type="submit" value="submit">			
+			<input type="submit" name="franchiseSignUpLogin" value="Franchise Login">			
 		
 		</form>
 		<br>

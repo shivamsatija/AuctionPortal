@@ -25,9 +25,9 @@
 			
 			
 			Please enter your password
-			<input type="password" name="password"/>
+			<input type="password" name="franchisePassword"/>
 			
-			<input type="submit" value="submit">			
+			<input type="submit" name ="franchiseSignUpLogin" value="Franchise SignUp">			
 		
 		</form>
 	</div>

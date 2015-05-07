@@ -13,7 +13,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="/var/www/mysql-connector-java-5.1.17-bin.jar/mysql-connector-java-5.1.17-bin.jar"/>
 	<classpathentry kind="lib" path="/var/www/commons-logging-1.2/commons-logging-1.2.jar"/>
 	<classpathentry kind="lib" path="/var/www/commons-logging-1.2/commons-logging-1.2-javadoc.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JavaServlet"/>
@@ -23,5 +22,6 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/var/www/mysql-connector-java-5.1.17-bin.jar/mysql-connector-java-5.1.17-bin.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

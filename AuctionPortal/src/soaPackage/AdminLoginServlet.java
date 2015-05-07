@@ -1,6 +1,7 @@
 package soaPackage;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,6 +12,10 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
+import session.AuctionPortalUtil;
+
+
+@WebServlet("/AdminLoginServlet")
 public class AdminLoginServlet extends HttpServlet {
 	/**
 	 * 
@@ -25,11 +30,8 @@ public class AdminLoginServlet extends HttpServlet {
 //			user.setUserId(1);
 			user.setEmailId(httpRequest.getParameter("username"));
 			user.setUserPassword(httpRequest.getParameter("password"));
-			
-			Configuration config=new Configuration().configure();
-			ServiceRegistry serviceRegistry=new StandardServiceRegistryBuilder().
-					applySettings(config.getProperties()).build();
-			SessionFactory sessionFactory=config.buildSessionFactory(serviceRegistry);
+						
+			SessionFactory sessionFactory=AuctionPortalUtil.getSessionFactory();
 			
 			user=UserDAO.login(user, sessionFactory);
 			
