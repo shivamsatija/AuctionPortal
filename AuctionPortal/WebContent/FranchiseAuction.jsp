@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type"
 	content="text/html; charset=windows-1256">
-<title>Franchise Logged Successfully</title>
+<title>Franchise Auction</title>
 </head>
 <body>
 	<center>
@@ -14,11 +14,6 @@
 		Welcome
 		<%= franchiseUser.getFranchiseId()%> 
 		to your home page
-		
-		<form action="<%=request.getContextPath()%>/FranchiseAuctionStartServlet"
-		method="post">
-        <input type="submit" name="AuctionStart" value="Franchise Start Auction">
-		</form>
 	</center>
 </body>
 </html>

@@ -21,7 +21,7 @@ public class FranchiseDAO {
 		else
 			franchiseDetails.setValid(true);
 		session.getTransaction().commit();
-//		session.close();
+		session.close();
 		return franchiseDetails;		
 	}
 	
@@ -41,7 +41,7 @@ public class FranchiseDAO {
 //		else
 //			franchiseDetails.setValid(false);
 		session.getTransaction().commit();
-//		session.close();
+		session.close();
 		return franchiseDetails;
 	}
 

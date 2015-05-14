@@ -8,6 +8,16 @@ import org.hibernate.service.ServiceRegistry;
 public class AuctionPortalUtil {
 	
 	private static SessionFactory sessionFactory;
+	
+	private static boolean auctionStarted;
+
+	public static boolean isAuctionStarted() {
+		return auctionStarted;
+	}
+
+	public static void setAuctionStarted(boolean auctionStarted) {
+		AuctionPortalUtil.auctionStarted = auctionStarted;
+	}
 
 	public static SessionFactory getSessionFactory() {
 		

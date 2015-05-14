@@ -7,10 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.hibernate.SessionFactory;
-
-import session.AuctionPortalUtil;
-
 
 @WebServlet("/AdminLoginServlet")
 public class AdminLoginServlet extends HttpServlet {
@@ -28,14 +24,14 @@ public class AdminLoginServlet extends HttpServlet {
 			user.setEmailId(httpRequest.getParameter("username"));
 			user.setUserPassword(httpRequest.getParameter("password"));
 						
-			SessionFactory sessionFactory=AuctionPortalUtil.getSessionFactory();
+//			SessionFactory sessionFactory=AuctionPortalUtil.getSessionFactory();
 			
-			user=UserDAO.login(user, sessionFactory);
+			user=UserDAO.login(user);
 			
 			if(user.isValid()){
 				HttpSession session=httpRequest.getSession(true);
 				session.setAttribute("currentSessionUser", user);
-				httpResponse.sendRedirect("userLogged.jsp");
+				httpResponse.sendRedirect("AdminLogged.jsp");
 			}
 			else
 				httpResponse.sendRedirect("invalidLogin.jsp");

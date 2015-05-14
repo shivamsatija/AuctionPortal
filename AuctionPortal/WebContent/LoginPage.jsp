@@ -17,9 +17,11 @@
 		<form action='<%=request.getContextPath()%>/AdminLoginServlet'
 			method='POST'>
 
-			Please enter your username (emailId) <input type="text"
-				name="username" /><br> Please enter your password <input
-				type="password" name="password" /> <input type="submit"
+			Please enter your username (emailId) 
+			<input type="text" name="username" />
+			<br>
+			Please enter your password 
+			<input type="password" name="password" /> <input type="submit"
 				name="AdminLogin" value="submit">
 
 		</form>

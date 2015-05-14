@@ -9,7 +9,7 @@
 <head>
 <meta http-equiv="Content-Type"
 	content="text/html; charset=windows-1256">
-<title>User Logged Successfully</title>
+<title>Admin Logged Successfully</title>
 </head>
 
 <body>
@@ -18,6 +18,12 @@
 
 		Welcome
 		<%= currentUser.getEmailId()  %>
+		<br>
+		<form action="<%=request.getContextPath()%>/AdminAuctionStartServlet"
+		method="post">
+		<input type="submit" name="AuctionStart" value="Admin Start Auction">
+		</form>
+		
 	</center>
 
 
